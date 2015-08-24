@@ -468,8 +468,8 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
             "referrer": document.referrer
         });
         
-        $("#mce-MMERGE1").on("focus", function(){
-            mixpanel.track("Question 1 Started");
+        $("input").select(function(){
+            mixpanel.track($(this).attr('id'));
         });
 
         mixpanel.track_forms("#mc-embedded-subscribe-form", "Submitted Form to Mail Chimp");
