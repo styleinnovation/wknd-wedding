@@ -467,6 +467,8 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
          mixpanel.track_links("#email-us", "Click - Email us", {
             "referrer": document.referrer
         });
+        
+        mixpanel.track_forms("#mc-embedded-subscribe-form", "Submitted Form to Mail Chimp");
       });
       
       
