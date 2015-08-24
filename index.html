@@ -75,7 +75,7 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
                   </li>
 
                     <li>
-                        <a class="page-scroll" href="#get-started"  data-toggle="modal" data-target="#myModal">Get Started</a>
+                        <a class="page-scroll" href="#get-started"  id="get-started-nav" data-toggle="modal" data-target="#myModal">Get Started</a>
                     </li>
                     <!--
                     <li>
@@ -99,7 +99,7 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
                 <hr>
                 <p><mark>Admit it - most of the wedding gifts you give/receive are forgettable.<br>Ladies night out, girls wknd, bachelorette parties...these are memories worth keeping!<br>Our jewelry is inspired by your favorite moments with people you love.</mark></p>
                 <!--<a href="#get-started" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
-                <a href="#get-started" class="btn btn-circle page-scroll"><i class="fa fa-angle-double-down wow bounceIn animated text-primary"></i></a>
+                <a href="#get-started" id="get-started-header-button" class="btn btn-circle page-scroll"><i class="fa fa-angle-double-down wow bounceIn animated text-primary"></i></a>
             </div>
         </div>
     </header>
@@ -261,7 +261,7 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Some of our favorite WKNDS</h2>
-                <a href="mailto:innovation.stylespace@gmail.com?subject=Send us your favorite WKND pics!&body=Hiya, Thanks for checking out WKND! We'd love to feature your favorite WKND pics and inspire our jewelry designers. Thanks for sharing your memories!" class="btn btn-default btn-xl">Share Yours!</a>
+                <a id="email-us" href="mailto:innovation.stylespace@gmail.com?subject=Send us your favorite WKND pics!&body=Hiya, Thanks for checking out WKND! We'd love to feature your favorite WKND pics and inspire our jewelry designers. Thanks for sharing your memories!" class="btn btn-default btn-xl">Share Yours!</a>
             </div>
         </div>
     </aside>
@@ -456,6 +456,15 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
         email.css("height", "50px");
         
         mixpanel.track_links("#how-it-works", "Click - How it works nav", {
+            "referrer": document.referrer
+        });
+         mixpanel.track_links("#get-started-nav", "Click - Get Started nav", {
+            "referrer": document.referrer
+        });
+        mixpanel.track_links("#get-started-header-button", "Click - Get Started Header Button", {
+            "referrer": document.referrer
+        });
+         mixpanel.track_links("#email-us", "Click - Email us", {
             "referrer": document.referrer
         });
       });
