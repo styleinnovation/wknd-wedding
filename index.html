@@ -49,6 +49,9 @@
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 mixpanel.init("9fdbd44c449648f689d103e80a42d22e");
 mixpanel.track("WKND - Wedding Home Page Loaded");
+ mixpanel.track_links("#how-it-works", "Click - How it works nav", {
+        "referrer": document.referrer
+    });
 </script><!-- end Mixpanel -->
 </head>
 
@@ -71,7 +74,7 @@ mixpanel.track("WKND - Wedding Home Page Loaded");
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                      <a class="page-scroll" href="#how-it-works">How It Works</a>
+                      <a class="page-scroll" href="#how-it-works" id="how-it-works">How It Works</a>
                   </li>
 
                     <li>
